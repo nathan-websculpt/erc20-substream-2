@@ -6,6 +6,7 @@ package:
 protobuf:
   files:
     - mydata.proto
+    - erc20.proto
   importPaths:
     - ./proto
   excludePaths:
@@ -24,6 +25,14 @@ modules:
    - source: sf.ethereum.type.v2.Block
    output :
     type: proto:mydata.v1.MyData
+
+ - name: map_transfers
+   kind: map
+   inputs:
+     - source: sf.ethereum.type.v2.Block
+   output:
+     type: proto:erc20.types.v1.TransferEvents
+
 
   # For performance, you should use a blockFilter whenever possible, like this:
   # imports:
