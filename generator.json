@@ -1,0 +1,7 @@
+{
+  "generator": "evm-minimal",
+  "state": {
+    "name": "erc_substream_2_project",
+    "chainName": "mainnet"
+  }
+}
